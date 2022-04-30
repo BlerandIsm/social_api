@@ -1,7 +1,7 @@
 const { User } = require('../models');
 
 const userController = {
-    getUser(req, res){
+        getUser(req, res){
         User.find ({})
         .then(userData => res.json(userData))
         .catch(err => {
