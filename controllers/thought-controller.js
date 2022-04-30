@@ -10,7 +10,7 @@ const thoughtController = {
             res.status(400).json(err);
         });
     },
-    geThoughtByID({ params }, res){
+    getThoughtByID({ params }, res){
         Thought.findOne({ _id: params.thoughtId })
         .then(thoughtData => res.json(thoughtData))
         .catch(err => {
